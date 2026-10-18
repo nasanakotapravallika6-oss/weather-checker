@@ -77,6 +77,7 @@ A responsive weather dashboard built with **pure HTML, CSS and JavaScript**. Sea
 - Rebuild in React as a framework comparison
 
 ---
-<img width="1215" height="611" alt="Screenshot 2026-10-18 191617" src="https://github.com/user-attachments/assets/367c9cc6-6b85-4f2c-89cd-58c1f2fc2d9c" />
+## website lool like this
 <img width="1186" height="628" alt="Screenshot 2026-10-18 191606" src="https://github.com/user-attachments/assets/48a419ec-f9d8-4094-a427-c863f0ae5782" />
+<img width="1215" height="611" alt="Screenshot 2026-10-18 191617" src="https://github.com/user-attachments/assets/367c9cc6-6b85-4f2c-89cd-58c1f2fc2d9c" />
 
