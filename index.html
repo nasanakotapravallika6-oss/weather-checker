@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pravallika's Weather Checker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-sky="clear">
+  <header class="top">
+    <div class="brand">
+      <h1>Pravallika’s Weather Checker</h1>
+      <p>Check the weather in any city</p>
+    </div>
+    <form id="search-form" class="search">
+      <label for="city" class="visually-hidden">City</label>
+      <input id="city" type="search" placeholder="Search for a city" autocomplete="off" required />
+      <button type="submit">Search</button>
+    </form>
+    <p id="status" class="status" role="status" aria-live="polite">Search for a city to see its weather.</p>
+    <ul id="choices" class="choices" aria-label="Other matching places"></ul>
+  </header>
+
+  <main class="dash idle" id="dash">
+    <section class="card main">
+      <div class="hero" id="scene">
+        <div class="stars" id="stars-scene" aria-hidden="true"></div>
+        <div class="sun-wrap" id="sun-wrap" aria-hidden="true"></div>
+        <div class="moon-wrap" id="moon-wrap" aria-hidden="true"></div>
+        <svg class="cloud c3" viewBox="14 18 44 31" aria-hidden="true"><use href="#cloud-shape"/></svg>
+        <svg class="cloud c1" viewBox="14 18 44 31" aria-hidden="true"><use href="#cloud-shape"/></svg>
+        <svg class="cloud c2" viewBox="14 18 44 31" aria-hidden="true"><use href="#cloud-shape"/></svg>
+        <div class="precip" id="precip" aria-hidden="true"></div>
+        <div class="flash" aria-hidden="true"></div>
+        <svg class="hills" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true">
+          <path class="h1" d="M0 70 C80 30 150 50 220 62 S350 40 400 55 V120 H0Z"/>
+          <path class="h2" d="M0 95 C70 70 140 85 210 90 S340 75 400 88 V120 H0Z"/>
+        </svg>
+
+        <div class="hero-top">
+          <div>
+            <h2 id="place"></h2>
+            <p id="time-line" class="small"></p>
+          </div>
+          <div class="unit" role="group" aria-label="Temperature unit">
+            <button type="button" data-unit="F">°F</button>
+            <button type="button" data-unit="C">°C</button>
+          </div>
+        </div>
+        <div class="hero-data">
+          <div id="icon" class="icon" aria-hidden="true"></div>
+          <p id="temp" class="temp"></p>
+          <div>
+            <p id="condition" class="condition"></p>
+            <p id="hilo" class="small"></p>
+            <p id="feels" class="small"></p>
+          </div>
+        </div>
+        <p class="hero-empty">Search for a city to see its weather.</p>
+      </div>
+      <div class="tabs" id="tabs" role="group" aria-label="Forecast day"></div>
+      <div class="chart" id="chart"></div>
+    </section>
+
+    <section class="card tile t-vis" id="t-vis"></section>
+    <section class="card tile t-press" id="t-press"></section>
+    <section class="card tile t-aqi" id="t-aqi"></section>
+    <section class="card tile t-uv" id="t-uv"></section>
+    <section class="card tile t-wind" id="t-wind"></section>
+    <section class="card tile t-hum" id="t-hum"></section>
+    <section class="card tile t-map" id="t-map"></section>
+    <section class="card tile t-sun" id="t-sun"></section>
+  </main>
+
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <defs>
+      <g id="cloud-shape">
+        <circle cx="24" cy="38" r="9"/><circle cx="36" cy="32" r="12"/><circle cx="47" cy="39" r="8"/>
+        <rect x="24" y="38" width="23" height="9" rx="4"/>
+      </g>
+    </defs>
+  </svg>
+  <script src="script.js"></script>
+</body>
+</html>
